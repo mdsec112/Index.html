@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المقاطع المحذوفة من قناة md_sec</title>
+    <title>المقاطع المحذوفة من قناة Md_sec</title>
     <style>
         * {
             margin: 0;
@@ -16,7 +16,7 @@
             direction: rtl;
             background-color: #000;
             color: white;
-            overflow: hidden; 
+            overflow: auto; /* السماح بالتمرير */
         }
 
         .container {
@@ -94,6 +94,7 @@
             height: 100%;
         }
 
+        /* تصميم النافذة المنبثقة */
         .popup {
             display: none;
             position: fixed;
@@ -114,16 +115,6 @@
             text-align: center;
             color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* الصورة الدائرية في النافذة المنبثقة */
-        .popup-img {
-            width: 100px;         
-            height: 100px;         
-            border-radius: 50%;    
-            margin-bottom: 20px;  
-            border: 2px solid #1e90ff;  
-            object-fit: cover;     
         }
 
         .popup h2 {
@@ -156,7 +147,7 @@
 
     <div class="container">
         <header>
-            <h1> المقاطع المحذوفة من قناة Md_sec</h1>
+            <h1>المقاطع المحذوفة من قناة Md_sec</h1>
         </header>
 
         <main>
@@ -175,34 +166,40 @@
                     </iframe>
                 </div>
 
-               
+              
+            </div>
         </main>
 
+        <!-- العداد فوق الكوبيرايت مباشرة -->
+        <div class="counter-widget" style="text-align: center; margin-top: 20px;">
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=18945326&style=0038&nbdigits=5&type=page&initCount=0" 
+                     title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+            </a>
+        </div>
+
         <footer>
-            <p>© 2025Md_sec</p>
+            <p>© 2025 Md_sec</p>
         </footer>
     </div>
 
     <!-- صفحة منبثقة (Popup) -->
     <div id="welcomePopup" class="popup">
         <div class="popup-content">
-            <!-- إضافة الصورة الدائرية -->
-            <img src="https://yt3.ggpht.com/7KUaHTSMXnn0AMCRHgip3VmUD7TlMTFZ4LTKmQmEi0241LmBbrLXSOBb_bWdmAQq6P7T6x1z2T4=s600-c-k-c0x00ffffff-no-rj-rp-mo" 
-                 alt="Md_sec Logo" class="popup-img">
             <h2>مرحباً بك في صفحة Md_sec !</h2>
             <p>هذه الصفحة تقوم بعرض المقاطع التي حذفتها سياسة اليوتيوب من قناة Md_sec</p>
             <button id="ignoreButton">تجاهل</button>
-            <button id="youtubeButton" onclick="window.location.href='https://www.youtube.com/@MdSec-i3d'">الذهاب إلى قناة اليوتيوب</button>
+            <button id="youtubeButton" onclick="window.location.href='https://www.youtube.com/channel/UCxxxxx'">الذهاب إلى قناة اليوتيوب</button>
         </div>
     </div>
 
     <script>
-      
+        // إظهار النافذة المنبثقة عند تحميل الصفحة
         window.onload = function() {
             document.getElementById('welcomePopup').style.display = 'flex';
         };
 
-      
+        // إغلاق النافذة المنبثقة عند الضغط على زر "تجاهل"
         document.getElementById('ignoreButton').onclick = function() {
             document.getElementById('welcomePopup').style.display = 'none';
         };

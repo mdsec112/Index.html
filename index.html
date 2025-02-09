@@ -118,6 +118,24 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
+        /* تنسيق الصورة الدائرية */
+        .popup-image {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .popup-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .popup h2 {
             font-size: 2em;
             margin-bottom: 20px;
@@ -186,6 +204,10 @@
     <!-- صفحة منبثقة (Popup) -->
     <div id="welcomePopup" class="popup">
         <div class="popup-content">
+            <!-- الصورة الدائرية -->
+            <div class="popup-image">
+                <img src="https://yt3.ggpht.com/7KUaHTSMXnn0AMCRHgip3VmUD7TlMTFZ4LTKmQmEi0241LmBbrLXSOBb_bWdmAQq6P7T6x1z2T4=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Channel Image">
+            </div>
             <h2>مرحباً بك في صفحة Md_sec !</h2>
             <p>هذه الصفحة تقوم بعرض المقاطع التي حذفتها سياسة اليوتيوب من قناة Md_sec</p>
             <button id="ignoreButton">تجاهل</button>

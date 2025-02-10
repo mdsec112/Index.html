@@ -16,8 +16,8 @@
             direction: rtl;
             background-color: #000;
             color: white;
-            height: 100%; /* تأكد من أن الارتفاع ليس محدودًا */
-            overflow-y: scroll; /* التمرير العمودي بشكل دائم */
+            height: 100%;
+            overflow-y: scroll;
         }
 
         .container {
@@ -95,71 +95,11 @@
             height: 100%;
         }
 
-        /* تصميم النافذة المنبثقة */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background-color: #000;
-            padding: 40px;
-            border-radius: 10px;
+        .donation-button {
             text-align: center;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
         }
 
-        /* تنسيق الصورة الدائرية */
-        .popup-image {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .popup-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .popup h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .popup button {
-            background: linear-gradient(to right, #1e90ff, #00bfff);
-            border: none;
-            color: white;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-            transition: background 0.3s;
-        }
-
-        .popup button:hover {
-            background: linear-gradient(to right, #00bfff, #1e90ff);
-        }
-
-        .popup button:focus {
-            outline: none;
-        }
     </style>
 </head>
 <body>
@@ -184,15 +124,21 @@
                             allowfullscreen>
                     </iframe>
                 </div>
-              
             </div>
         </main>
 
-        <!-- العداد فوق الكوبيرايت مباشرة -->
         <div class="counter-widget" style="text-align: center; margin-top: 20px;">
             <a href="https://www.hitwebcounter.com" target="_blank">
                 <img src="https://hitwebcounter.com/counter/counter.php?page=18945326&style=0038&nbdigits=5&type=page&initCount=0" 
                      title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+            </a>
+        </div>
+
+        <div class="donation-button">
+            <a href="https://www.buymeacoffee.com/mdsec66k" target="_blank">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                     alt="Buy Me A Coffee" 
+                     style="height: 60px !important;width: 217px !important;">
             </a>
         </div>
 
@@ -201,27 +147,11 @@
         </footer>
     </div>
 
-    <!-- صفحة منبثقة (Popup) -->
-    <div id="welcomePopup" class="popup">
-        <div class="popup-content">
-            <!-- الصورة الدائرية -->
-            <div class="popup-image">
-                <img src="https://yt3.ggpht.com/7KUaHTSMXnn0AMCRHgip3VmUD7TlMTFZ4LTKmQmEi0241LmBbrLXSOBb_bWdmAQq6P7T6x1z2T4=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Channel Image">
-            </div>
-            <h2>مرحباً بك في صفحة Md_sec !</h2>
-            <p>هذه الصفحة تقوم بعرض المقاطع التي حذفتها سياسة اليوتيوب من قناة Md_sec</p>
-            <button id="ignoreButton">تجاهل</button>
-            <button id="youtubeButton" onclick="window.location.href='https://www.youtube.com/channel/UCxxxxx'">الذهاب إلى قناة اليوتيوب</button>
-        </div>
-    </div>
-
     <script>
-        // إظهار النافذة المنبثقة عند تحميل الصفحة
         window.onload = function() {
             document.getElementById('welcomePopup').style.display = 'flex';
         };
 
-        // إغلاق النافذة المنبثقة عند الضغط على زر "تجاهل"
         document.getElementById('ignoreButton').onclick = function() {
             document.getElementById('welcomePopup').style.display = 'none';
         };
